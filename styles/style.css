@@ -2,4 +2,341 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr max-content 1fr;
+  padding: var(--small-padding);
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: var(--small-padding);
+  left: var(--small-padding);
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--main-text-color);
+  border-left: 1px solid var(--main-text-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: var(--small-padding);
+  right: var(--small-padding);
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--main-text-color);
+  border-right: 1px solid var(--main-text-color);
+}
+
+.rec {
+  display: var(--rec_display);
+  position: absolute;
+  top: var(--small-padding);
+  right: 19px;
+  color: #ff0070;
+  text-align: center;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+.rec::before {
+  content: "REC";
+}
+
+.rec::after {
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background: #ff0070;
+  box-shadow: 0px 0px 4px #ff0070;
+  display: inline-block;
+}
+
+.header__theme-menu {
+  align-self: center;
+  justify-self: end;
+}
+
+.header__theme-menu-item {
+  margin-bottom: 13px;
+}
+
+.header__theme-menu-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0px 13px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.header__theme-menu-list {
+  color: var(--main-text-color);
+  text-align: center;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--main-text-color);
+}
+
+.header__title {
+  align-self: center;
+  justify-self: center;
+}
+
+.main-font {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--h1-color);
+  text-shadow: 4px 4px 0px var(--h1-shadow-color);
+  font-family: IBM Plex Mono;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+}
+
+.link {
+  text-shadow: 2px 2px 0px var(--accent-backgroung-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: none;
+  border: 1px solid currentColor;
+}
+
+.header__paragraph {
+  align-self: center;
+  justify-self: center;
+  color: var(--accent-text-color);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+
+.content {
+  padding: 0px var(--small-padding);
+}
+
+.title-decor {
+  background: var(--accent-backgroung-color);
+}
+
+.main__title-2 {
+  color: var(--main-text-color);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  margin-bottom: var(--medium-padding);
+}
+
+.main__title-3 {
+  color: var(--accent-text-color);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+.main__title-4 {
+  color: var(--accent-text-color);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+  margin-top: var(--medium-padding);
+}
+.main__paragraph {
+  color: var(--list-text-color);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+  margin-top: var(--small-padding);
+  margin-bottom: var(--medium-padding);
+}
+
+.main__gallery {
+  display: grid;
+  gap: var(--small-padding);
+  margin-top: var(--small-padding);
+}
+
+.main__gallery-sunset {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+.main__gallery-ice-cream {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+.main__gallery-tape {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+.main__gallery-books {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+.main__gallery-street {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+
+.footer {
+  height: 100vh;
+  padding: var(--small-padding);
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.main__section-1,
+.footer {
+  margin-top: calc(var(--large-padding) - var(--small-padding));
+}
+
+.main__section-2,
+.main__section-3,
+.main__section-4 {
+  margin-top: var(--large-padding);
+}
+
+@media (768px <= width) {
+  :root {
+    --large-padding: 80px; /*большой отступ*/
+  }
+
+  .header,
+  .footer {
+    padding: var(--medium-padding);
+  }
+
+  .content {
+    padding: 0px var(--medium-padding);
+  }
+  .header__title {
+    justify-self: start;
+    margin-left: calc((-1) * var(--medium-padding));
+  }
+  .header__paragraph {
+    justify-self: end;
+    max-width: 50%;
+  }
+  .main__section-1,
+  .main__section-3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--medium-padding);
+  }
+  .main__section-2 .main__title-2 {
+    width: calc((100% / 3) - var(--medium-padding));
+  }
+
+  .main__section-1,
+  .footer {
+    margin-top: calc(var(--large-padding) - var(--medium-padding));
+  }
+
+  .main__gallery {
+    display: grid;
+    margin-top: var(--medium-padding);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--medium-padding);
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+  .main__gallery-sunset {
+    grid-area: sunset;
+    height: 100%;
+  }
+  .main__gallery-ice-cream {
+    grid-area: ice-cream;
+    height: 100%;
+  }
+  .main__gallery-tape {
+    grid-area: tape;
+    height: 100%;
+  }
+  .main__gallery-books {
+    grid-area: books;
+    height: 100%;
+  }
+  .main__gallery-street {
+    grid-area: street;
+    height: 100%;
+  }
+}
+
+@media (1024px <= width) {
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+  }
+  .header__theme-menu-item {
+    display: inline-block;
+  }
+  .main__section-2__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--medium-padding);
+  }
 }
