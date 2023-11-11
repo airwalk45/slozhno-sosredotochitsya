@@ -73,10 +73,6 @@
   justify-self: end;
 }
 
-.header__theme-menu-item {
-  margin-bottom: 13px;
-}
-
 .header__theme-menu-item:not(:last-child) {
   margin-bottom: 13px;
 }
@@ -121,7 +117,7 @@
 }
 
 .main-font {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--main-font-size);
   color: var(--h1-color);
   text-shadow: 4px 4px 0px var(--h1-shadow-color);
   font-family: IBM Plex Mono;
@@ -260,6 +256,7 @@
 @media (768px <= width) {
   :root {
     --large-padding: 80px; /*большой отступ*/
+    --main-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header,
