@@ -2,6 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-position: center;
   background-size: cover;
@@ -45,7 +46,7 @@
   display: var(--rec_display);
   position: absolute;
   top: var(--small-padding);
-  right: 19px;
+  right: calc(var(--small-padding) + 9);
   color: #ff0070;
   text-align: center;
   font-family: IBM Plex Mono;
@@ -56,6 +57,10 @@
 }
 .rec::before {
   content: "REC";
+}
+
+.list-paddings:not(:last-child){
+  margin-bottom: 20px;
 }
 
 .rec::after {
@@ -198,7 +203,6 @@
   font-weight: 400;
   line-height: 23.4px; /* 130% */
   margin-top: var(--small-padding);
-  margin-bottom: var(--medium-padding);
 }
 
 .main__gallery {
@@ -252,7 +256,7 @@
 .main__section-4 {
   margin-top: var(--large-padding);
 }
-
+/*===================================768px <= width==========================================*/
 @media (768px <= width) {
   :root {
     --large-padding: 80px; /*большой отступ*/
@@ -262,6 +266,19 @@
   .header,
   .footer {
     padding: var(--medium-padding);
+  }
+  .rec {
+  top: var(--medium-padding);
+  right: calc(var(--medium-padding) + 9px);
+}
+  .decorated-zone::before {
+    bottom: var(--medium-padding);
+    left: var(--medium-padding);
+  }
+
+  .decorated-zone::after {
+    top: var(--medium-padding);
+    right: var(--medium-padding);
   }
 
   .content {
@@ -322,7 +339,7 @@
     height: 100%;
   }
 }
-
+/*===================================1024px <= width==========================================*/
 @media (1024px <= width) {
   .header__theme-menu {
     align-self: start;
@@ -335,5 +352,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--medium-padding);
+  }
+  .main__section-2 .list-paddings:not(:last-child){
+    margin-bottom: 0px;
   }
 }
