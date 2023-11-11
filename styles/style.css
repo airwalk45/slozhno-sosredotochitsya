@@ -59,7 +59,7 @@
   content: "REC";
 }
 
-.list-paddings:not(:last-child){
+.list-paddings:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -268,9 +268,9 @@
     padding: var(--medium-padding);
   }
   .rec {
-  top: var(--medium-padding);
-  right: calc(var(--medium-padding) + 9px);
-}
+    top: var(--medium-padding);
+    right: calc(var(--medium-padding) + 9px);
+  }
   .decorated-zone::before {
     bottom: var(--medium-padding);
     left: var(--medium-padding);
@@ -311,7 +311,7 @@
     display: grid;
     margin-top: var(--medium-padding);
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
     gap: var(--medium-padding);
     grid-template-areas:
       "sunset sunset ice-cream"
@@ -320,7 +320,6 @@
   }
   .main__gallery-sunset {
     grid-area: sunset;
-    height: 100%;
   }
   .main__gallery-ice-cream {
     grid-area: ice-cream;
@@ -332,11 +331,9 @@
   }
   .main__gallery-books {
     grid-area: books;
-    height: 100%;
   }
   .main__gallery-street {
     grid-area: street;
-    height: 100%;
   }
 }
 /*===================================1024px <= width==========================================*/
@@ -353,7 +350,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--medium-padding);
   }
-  .main__section-2 .list-paddings:not(:last-child){
+  .main__section-2 .list-paddings:not(:last-child) {
     margin-bottom: 0px;
   }
 }
