@@ -5,10 +5,10 @@
 :root {
   --background-color: #000028; /*цвет фона под изображением*/
   --accent-color: #ff0070; /*акцентный цвет - фон под заголовками, тени*/
-  --main-text-color: #ff0070; /*яркий цвет - заголовки, ссылки*/
+  --text-color: #ff0070; /*яркий цвет - заголовки, ссылки*/
   --list-text-color: #f1b2ce; /*яркий цвет - заголовки, ссылки*/
-  --h1-color: #db00ff; /*цвет заголовка*/
-  --h1-shadow-color: #ff0070; /*цвет тени заголовка*/
+  --logo-color: #db00ff; /*цвет заголовка*/
+  --logo-shadow-color: #ff0070; /*цвет тени заголовка*/
   --accent-backgroung-color: #ff0070; /*фоновый цвет для акцентных надписей + тень для ссылок*/
   --accent-text-color: #000028; /*акцентный цвет - тексты кнопок и заголовки списков*/
   --small-padding: 10px; /*маленький отступ*/
@@ -23,5 +23,5 @@
   ); /*цвет рамки кнопок в режиме hover*/
   --rec_display: block; /*видимость надписи REC*/
   --main-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --main-font: "IBM Plex Mono", sans-serif;
+  --main-font: "IBM Plex Mono", monospace;
 }

@@ -13,8 +13,8 @@
   --background-image: url(../images/cover-image-light.png); /*подложка/фоновое изображение*/
   --main-text-color: #353430; /*яркий цвет - заголовки, ссылки*/
   --list-text-color: #353430; /*яркий цвет - заголовки, ссылки*/
-  --h1-color: #ffc2e6; /*цвет заголовка*/
-  --h1-shadow-color: #ff8dcb; /*цвет тени заголовка*/
+  --logo-color: #ffc2e6; /*цвет заголовка*/
+  --logo-shadow-color: #ff8dcb; /*цвет тени заголовка*/
   --accent-backgroung-color: #ff8dcb; /*фоновый цвет для акцентных надписей + тень для ссылок*/
   --accent-text-color: #353430; /*акцентный цвет - тексты кнопок и заголовки списков*/
   --button-hover-color: rgba(
@@ -30,10 +30,10 @@
   :root {
     --background-color: #fff1f7; /*цвет фона под изображением*/
     --background-image: url(../images/cover-image-light.png); /*подложка/фоновое изображение*/
-    --main-text-color: #353430; /*яркий цвет - заголовки, ссылки*/
+    --text-color: #353430; /*яркий цвет - заголовки, ссылки*/
     --list-text-color: #353430; /*яркий цвет - заголовки, ссылки*/
-    --h1-color: #ffc2e6; /*цвет заголовка*/
-    --h1-shadow-color: #ff8dcb; /*цвет тени заголовка*/
+    --logo-color: #ffc2e6; /*цвет заголовка*/
+    --logo-shadow-color: #ff8dcb; /*цвет тени заголовка*/
     --accent-backgroung-color: #ff8dcb; /*фоновый цвет для акцентных надписей + тень для ссылок*/
     --accent-text-color: #353430; /*акцентный цвет - тексты кнопок и заголовки списков*/
     --button-hover-color: rgba(
