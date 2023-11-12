@@ -283,13 +283,6 @@
     gap: var(--medium-padding);
   }
 
-  .main__section-why,
-  .main__section-how {
-    grid-template-areas:
-      "main__section-titel lists"
-      "main__section-titel lists"
-  }  
-
   .main__section-what .main__section-titel {
     width: calc((100% / 3) - var(--medium-padding));
   }
