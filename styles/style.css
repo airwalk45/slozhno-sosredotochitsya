@@ -192,6 +192,7 @@
 .main__sub-list-titel {
   color: var(--accent-text-color);
   margin-top: var(--medium-padding);
+  font-weight: 400;
 }
 
 .main__paragraph {
@@ -264,20 +265,31 @@
   .content {
     padding: 0px var(--medium-padding);
   }
+
   .header__title {
     justify-self: start;
     margin-left: calc((-1) * var(--medium-padding));
   }
+
   .header__paragraph {
     justify-self: end;
     max-width: 50%;
   }
+
   .main__section-why,
   .main__section-how {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: var(--medium-padding);
   }
+
+  .main__section-why,
+  .main__section-how {
+    grid-template-areas:
+      "main__section-titel lists"
+      "main__section-titel lists"
+  }  
+
   .main__section-what .main__section-titel {
     width: calc((100% / 3) - var(--medium-padding));
   }
